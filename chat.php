@@ -51,9 +51,28 @@ session_start();
      
     </head>
     <body>
-    	<div class="container-fluid">
-    		<h4 class="text-center">Chat with guarantors online <a href="home.php">HOME</a></h4>
-    		<?php
+       
+    		<h4 class="text-center">Chat with guarantors/Applicant online <a href="home.php">HOME</a></h4> <?php
+         if(isset($_SESSION['permit']))
+          if($_SESSION['permit']['type'] == 0) {?>
+            Guatantee:
+            <input type="checkbox" name="check" value="1">
+            <span class="checkmark"></span>
+            <br/><br/>
+
+            Decline:
+            <input type="checkbox" name="check" value="0">
+            <span class="checkmark"></span>
+            <button type="submit"name="submit">Submit</button>
+
+
+          <?php }?>
+          <?php
+           if (isset($_POST['submit'])) {
+          $check = mysqli_real_escape_string($conn, $_POST['check']);
+          $sql = "UPDATE `loanapplication` SET `Gfeedback`=$check where `AppDoneBy` = $Nationalid";
+        }
+        
 			$sql = "SELECT * FROM `chatters` WHERE `user1_Id` = '$senda' OR `user1_Id` = '$recieva' AND `user2_Id`='$recieva' or `user2_Id`='$senda' AND `chatlinkingId` is NOT null";
 
 			$chtresult = $conn->query($sql);

@@ -56,7 +56,10 @@ background-color: #f2f2f2;
     <tr>
       <?php
       echo '
-      <td><a href="Chat.php?gid='.$_SESSION['row']['Nationalid'].'" >'. $_SESSION['row']['First'] .'</a></td>
+      <td><a href="Chat.php?gid='.$_SESSION['row']['Nationalid'].'" >'. $_SESSION['row']['First'] .'
+
+
+      </a></td>
       ';
       ?>
       <td><?php echo $_SESSION['row']['Last']; ?></td>

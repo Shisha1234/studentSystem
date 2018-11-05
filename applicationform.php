@@ -147,7 +147,7 @@ function test_input($data) {
     <label for="fname">Loan Amount</label>
       </div>
       <div class="col-75">
-   <input type="text" name="amount" value="<?php echo $name;?>">
+   <input type="text" name="amount" value="<?php echo $name;?>" required>
   </div>
     </div>
     <div class="row">
