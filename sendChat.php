@@ -21,4 +21,19 @@ if (isset($_POST['send']))
 		echo "error ". $query." ".$conn->error;
 	  }  	
 }
+if(isset($_POST['subresult'])){
+$chkres = $_POST['chk'];
+$chkreceiva = $_POST['garantres'];
+
+$sqlchk = "UPDATE `loanapplication` SET `Gfeedback`= '$chkres' WHERE `gNationalId` ='$chkreceiva'";
+
+if($conn->query($sqlchk)){
+
+$_SESSION['recieve'] = $chkreceiva;
+
+header("Location:chat.php?gid=".$_SESSION['recieve']);
+}else{
+echo "Error";
+}
+}
 ?>

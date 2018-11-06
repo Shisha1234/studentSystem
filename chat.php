@@ -55,17 +55,17 @@ session_start();
     		<h4 class="text-center">Chat with guarantors/Applicant online <a href="home.php">HOME</a></h4> <?php
          if(isset($_SESSION['permit']))
           if($_SESSION['permit']['type'] == 0) {?>
+			<form action="sendChat.php" method = "POST">
             Guatantee:
-            <input type="checkbox" name="check" value="1">
-            <span class="checkmark"></span>
+            <input type="radio" name="chk" value="1">
+			<input type="hidden" name="garantres" value="<?php echo $recieva; ?>"><br>
             <br/><br/>
 
             Decline:
-            <input type="checkbox" name="check" value="0">
-            <span class="checkmark"></span>
-            <button type="submit"name="submit">Submit</button>
+            <input type="radio" name="chk" value="0">
 
-
+            <button type="submit" name="subresult">Submit</button>
+			</form>
           <?php }?>
           <?php
            if (isset($_POST['submit'])) {

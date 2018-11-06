@@ -19,7 +19,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `loan_app`
+create database loan_app;
+use loan_app;
 --
 
 -- --------------------------------------------------------
