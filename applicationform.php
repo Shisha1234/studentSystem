@@ -11,7 +11,7 @@ require 'connection.php';
 }
 
 input[type=text], select, textarea {
-    width: 100%;
+    width: 80%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -144,22 +144,29 @@ function test_input($data) {
   <div class="col-25"> 
     <span class="error"><?php echo $nameErr;?></span>
   <br>
-    <label for="fname">Loan Amount</label>
+    <label for="fname">Applicants Full Name</label>
       </div>
       <div class="col-75">
    <input type="text" name="amount" value="<?php echo $name;?>" required>
   </div>
     </div>
+    <br/>
     <div class="row">
-      <div class="col-25">
-        <label for="subject">Reason For Application</label>
+  <div class="col-25"> 
+    <span class="error"><?php echo $nameErr;?></span>
+  <br>
+    <label for="fname">Employer</label>
       </div>
-      <div class="col-75">
-        <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-      </div>
+       <div class="col-75">
+   <input type="text" name="amount" value="<?php echo $name;?>" required>
+  </div>
+      <br>
+      <div class="row">
+  <div class="col-25"> 
+    <span class="error"><?php echo $nameErr;?></span>
+  <br>
     </div>
-    <span class="error"><?php echo $genderErr;?></span>
-     <br />
+    <br>
     
   <div class="row" style="margin-right: 50%">
     <a href="applicationform.php" download>Download</a>

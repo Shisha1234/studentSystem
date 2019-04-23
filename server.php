@@ -1,4 +1,5 @@
 
+
 <?php
      session_start();
      require "connection.php";
@@ -20,8 +21,7 @@
           $pass1 = md5($pass1);
           $pass2 = md5($pass2);
           if ($pass1 == $pass2) {
-      
-         $sql = "INSERT INTO `signup`(`Nationalid`, `First`, `Last`, `YOB`, `Email`, `phone`, `pass1`, `type`) VALUES ('$national','$first','$last','$YOB','$mail','$phone','$pass', '$type')";
+         $sql = "INSERT INTO `signup`(`Nationalid`, `First`, `Last`, `YOB`, `Email`, `phone`, `pass1`, `type`) VALUES ('$national','$first','$last','$YOB','$mail','$phone','$pass1', '$type')";
           
           $result = $conn->query($sql);
             if(!$result) {
@@ -30,6 +30,7 @@
                header('location:login.php');
             }
             else{
+               
               echo "Error: " . $sql . "<br>" . $conn->error;
             }
           }    

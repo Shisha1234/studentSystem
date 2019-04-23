@@ -1,3 +1,5 @@
+
+
  <?php
 session_start();
   require "connection.php";
@@ -58,7 +60,7 @@ session_start();
 			<form action="sendChat.php" method = "POST">
             Guatantee:
             <input type="radio" name="chk" value="1">
-			<input type="hidden" name="garantres" value="<?php echo $recieva; ?>"><br>
+           			<input type="hidden" name="garantres" value="<?php echo $recieva; ?>"><br>
             <br/><br/>
 
             Decline:

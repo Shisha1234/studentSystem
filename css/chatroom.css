@@ -1,9 +1,8 @@
 #chatBox{
-    
     max-width: 650px;
     height: 800px;
     margin: 0 auto;
-
+    
 }
 #myChatForm{
     text-align:center;
